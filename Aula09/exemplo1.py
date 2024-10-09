@@ -1,7 +1,7 @@
 import os
 os.system("cls")
 
-# EXEMPLO 1 - TRY
+# EXEMPLO 1.1 - TRY
 try:
     n = int(input("Insira numero: "))
 except (ValueError, KeyboardInterrupt) as e:
@@ -9,7 +9,7 @@ except (ValueError, KeyboardInterrupt) as e:
 except:
     print("\nErro encontrado.")
 
-# EXEMPLO 2
+# EXEMPLO 1.2
 try:
     txt = input("Informe o nome: ")[0]
 except IndexError:
