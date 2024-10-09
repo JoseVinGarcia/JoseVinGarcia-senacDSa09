@@ -4,9 +4,17 @@ os.system("cls")
 # EXEMPLO 1 - TRY
 try:
     n = int(input("Insira numero: "))
-except ValueError as e:
+except (ValueError, KeyboardInterrupt) as e:
     print(f"\nErro: {e}")
-except KeyboardInterrupt:
-    print("\nErro encontrado.")
 except:
     print("\nErro encontrado.")
+
+# EXEMPLO 2
+try:
+    txt = input("Informe o nome: ")[0]
+except IndexError:
+    print("Precisa digitar algo!")
+else:
+    print(f"Olá, {txt}!")
+finally:
+    print("Sempre executado")
